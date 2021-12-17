@@ -4,7 +4,7 @@
   "description": "秘密の匿名掲示板",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "dev": "nodemon -L index.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +16,11 @@
     "pg-hstore": "2.3.3",
     "pug": "^2.0.0-rc.4",
     "sequelize": "6.5.0"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

@@ -7,6 +7,7 @@ services:
       - 8000:8000
     volumes:
       - .:/app
+      - /app/node_modules
     depends_on:
       - db
   db:
@@ -17,4 +18,8 @@ services:
       POSTGRES_DB: secret_board
       TZ: "Asia/Tokyo"
     volumes:
-      - ../secret-board-db:/var/lib/postgresql/data
+      - postgresql-data:/var/lib/postgresql/data
+volumes:
+  postgresql-data:
+    external: true
+    name: secret-board-db
